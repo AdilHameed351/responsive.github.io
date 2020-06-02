@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <title>Top Header in Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Open Sans', sans-serif;
+        }
+        .top-header{
+            display: flex;
+            font-size: 19px;
+            border-bottom: 1px solid rgb(206, 206, 206);
+            margin-bottom: 20px;
+        }
+        .top-left{
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+        .phone, .gmail{
+            display: flex;
+            padding: 5px 20px;
+        }
+        .gmail{
+            border-left: 1px solid rgb(206, 206, 206);
+            border-right: 1px solid rgb(206, 206, 206);
+        }
+         .phone img, .gmail img{
+            margin-right: 10px;
+        }
+        .top-right{
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .top-right a{
+            color: rgba(27, 26, 26, 0.986);
+            text-decoration: none;
+        }
+        .top-right p{
+            padding: 0px 20px;
+            line-height: 40px;
+            border-right: 1px solid rgb(206, 206, 206);
+        }
+        .top-right #About-Us{
+            border-left: 1px solid rgb(206, 206, 206);
+        }
+        .top-right #help{
+            padding-right: 0px;
+        }
+        .main-content h1{
+            text-align: center;
+            margin-bottom: 20px;
+            color: #74b9ff;
+        }
+        .main-content h1::first-letter{
+            color: #d63031;
+        }
+        .main-content-images{
+            display: flex;
+            justify-content: space-around;
+        }
+        .main-content-images img{
+            width: 31%;
+        }
+        @media (max-width: 800px){
+            .top-header{
+                flex-direction: column;
+            }
+            .top-left, .top-right{
+                justify-content: center;
+                border-bottom: 1px solid rgb(206, 206, 206);
+            }
+            .phone{
+                border-left: 1px solid rgb(206, 206, 206);
+            }
+            .top-right #help{
+                padding-right: 20px; 
+            }
+        }
+        @media (max-width: 400px){
+            .top-left{
+                flex-direction: column;
+            }
+            .phone{
+                border-bottom: 1px solid rgb(206, 206, 206);
+                width: 100%;
+            }
+            .gmail{
+                width: 100%;
+                border: none;
+            }
+            .top-right{
+                font-size: 12px;
+            }
+            .main-content h1{
+                font-size: 30px;
+            }
+            .main-content-images{
+                flex-direction: column;
+                align-items: center;
+            }
+            .main-content-images img{
+                width: 100%;
+                margin: 10px 0px;
+            }
+        }
+        @media (max-width: 270px){
+            .top-right{
+                flex-direction: column;
+            }
+            .top-right p{
+                border: none;
+                border-bottom: 1px solid rgb(206, 206, 206);
+            }
+            .top-right #help{
+                border: none;
+            }
+        }
+        @media (max-width: 200px){
+            .top-left{
+                font-size: 16px;
+            }
+            .top-left img{
+                width: 20px;
+                height: 20px;
+            }
+        }
+        </style>
+</head>
+<body>
+    <div class="top-header">
+        <div class="top-left">
+            <div class="phone">
+                <img src="Imag/phone1.jpg" alt="phone pic" />
+                <p>01-4240000</p>
+            </div>
+            <div class="gmail">
+                <img id="gmail" src="Imag/gmail.jpg" alt="gmail pic" />
+                <p>abc@gmail.com</p>
+            </div>
+        </div>
+        <div class="top-right">
+            <a href="https://www.facebook.com"><p id="About-Us">About Us</p></a>
+            <a href="https://www.google.com"><p>Login/Sign Up</p></a>
+            <a href="https://www.youtube.com"><p id="help">Help</p></a>
+        </div>
+    </div>
+    <div class="main-content">
+        <h1>Nature Images</h1>
+        <div class="main-content-images">
+            <img src="Imag/cat1.jpg" alt="cat pic" />
+            <img src="Imag/forest1.jpg" alt="forest pic" />
+            <img src="Imag/mosque1.jpg" alt="mosque pic" />
+        </div>
+    </div>
+</body>
+</html>
